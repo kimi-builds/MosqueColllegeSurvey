@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title>Página principal.</title>
+        <meta charset="UTF-8" />    
+    </head>                
+        <body>
+            <div id="cont" align="center">
+            <video id="main" src="/Quest.mp4" controls height="583" autoplay></video>
+        </div> 
+        <script>
+            function placebtn() {
+                function ops() {
+                    window.open("https://kimi-builds.github.io");
+                };
+                var b = document.createElement("button");
+                var text = document.createTextNode("Vamos, leve-me até lá.");
+                b.appendChild(text);
+                var el = document.getElementById("cont");
+                el.appendChild(b);
+                document.getElementsByTagName("button")[0].addEventListener("click",ops);
+                document.getElementsByTagName("button")[0].style.marginLeft = "5px";
+                document.getElementsByTagName("button")[0].style.position = "absolute";
+                document.getElementsByTagName("button")[0].style.marginTop = "291.5px";            
+            };
+            function counter() {
+               setTimeout(placebtn,3000);
+            };
+            counter();
+        </script>
+        </body>
+ </html>   
