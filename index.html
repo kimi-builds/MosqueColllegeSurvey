@@ -1,31 +1,313 @@
-<!DOCTYPE html>
-    <head>
-        <title>Página principal.</title>
-        <meta charset="UTF-8" />    
-    </head>                
-        <body>
-            <div id="cont" align="center">
-            <video id="main" src="/Quest.mp4" controls height="583" autoplay></video>
-        </div> 
-        <script>
-            function placebtn() {
-                function ops() {
-                    window.open("https://form.jotform.com/221396549511055");
-                };
-                var b = document.createElement("button");
-                var text = document.createTextNode("Vamos, leve-me até lá.");
-                b.appendChild(text);
-                var el = document.getElementById("cont");
-                el.appendChild(b);
-                document.getElementsByTagName("button")[0].addEventListener("click",ops);
-                document.getElementsByTagName("button")[0].style.marginLeft = "5px";
-                document.getElementsByTagName("button")[0].style.position = "absolute";
-                document.getElementsByTagName("button")[0].style.marginTop = "291.5px";            
-            };
-            function counter() {
-               setTimeout(placebtn,67000);
-            };
-            counter();
-        </script>
-        </body>
- </html>   
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Participação dos EUA na Guerra Fria</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body onload="fillwSlidesInfo()" class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <script>
+      function fillwSlidesInfo(){
+      const clider = document.getElementsByClassName('carousel-inner')[0];
+      for (let i = 4; i <= 50; i++) {
+    clider.innerHTML += `
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#e5e5e5"></rect>
+            </svg>
+            <div class="carousel-caption d-none d-md-block">
+                <img id="img${i}"/>
+                <p id=ps${i}>This is slide ${i}.</p>
+            </div>
+        </div>
+    `;
+}
+  const textos = ["Entre novembro de 1945 e dezembro de 1946, múltiplos governos de coalizão estabelecidos no leste europeu reconfiguraram-se como Repúblicas Populares, com fortes laços com a União Soviética. Isso aconteceu na Albânia e Bulgária, para se citar exemplos. Consequentemente, os Estados Unidos e o Reino Unido consideraram que os acordos firmados na Conferência de Ialta tinham sido suprimidos.",
+  "Em 22 de fevereiro de 1946, George F. Kennan, Encarregado de Relações na Embaixada de Moscou, enviou um longo telegrama para o Departamento de Defesa americano detalhando suas consternações com o expansionismo soviético. Kennan propôs que os Estados Unidos encabeçassem a contenção dos soviéticos no ocidente, influenciando profundamente políticas estadunidenses relativas à URSS.",
+  "Os países anglófonos passaram a observar o avanço soviético no leste europeu com vigor. Durante um discurso em Fulton, Missouri, em 5 de março de 1946, o Primeiro-Ministro britânico Winston Churchill declarou que a Europa estava dividida por uma crescente “Cortina de Ferro”: Iugoslávia, Albânia, Bulgária, Polônia, Hungria e Checoslováquia estavam todas sob controle soviético no início de 1948.",
+  "Também em março de 1946, os Estados Unidos arremataram uma nota a Moscou em que protestavam contra a retenção de tropas soviéticas no Irã, onde Stalin desejava fixar influência. Logo em 3 de abril a URSS anunciou que suas tropas deixariam a região dentro de um mês.",
+  "Temendo que soviéticos firmassem influência sobre Turquia e Grécia a fim de conquistar acesso ao Mediterrâneo, o então presidente Harry S. Truman discursou diante do Congresso em 12 de março de 1947, pleiteando 400 milhões de dólares em fundos assistentes destinados aos dois países. A finalidade maior seria promover governos favoráveis ao ocidente nas nações. Nesta ocasião, o presidente aditou que a “Doutrina Truman” embasaria a política dos EUA para a Guerra Fria no que diz respeito à contenção do protagonismo soviético e de forças paralelas.",
+  "A polaridade capitalismo-socialismo atingiu um apogeu após declarações do Secretário de Estado do governo americano, George C. Marshall, que “ofereceu” assistência norteamericana para a recuperação econômica pós-guerra de todas as nações europeias, incluindo aquelas íntimas à URSS. Em reação, esta dispensou o dito Plano Marshall, alegando que atentasse contra a soberania europeia. Nações do oeste europeu assentiram à política de auxílio, ao passo que Estados a leste no continente posicionaram-se junto a Moscou.",
+  "Em meados de 1948, a União Soviética obstou o acesso aos setores ocidentais de Berlim, situados na zona de ocupação soviética na Alemanha. Os poderes ocidentais organizaram uma ponte aérea considerável para abastecer Berlim Ocidental, bem como uma contra-barricada ao sítio soviético. Em 12 de maio de 1949, a URSS suspendeu o bloqueio.",
+  "Em 14 de abril de 1949, doze nações ocidentais assinaram o Tratado do Atlântico-Norte, o qual articularia suporte mútuo entre os integrantes caso uma eventual investida militar fosse iniciada contra qualquer parte signatária. Estabeleceram, assim, a Organização do Tratado do Atlântico-Norte, OTAN ou NATO.",
+  "Em abril de 1950, Truman assinou o Informe 68 do Conselho de Segurança Nacional, abreviado NSC-68, o qual dispunha das razões estadunidenses para um escalonamento militar rápido e massivo. O Informe 68 cita como fatores motivadores, entre outros, a consolidação soviética de poder no leste europeu, as tendências expansionistas soviéticas e a necessidade de o ocidente barrá-las. ",
+  "Depois de consumada a Segunda Guerra Mundial, os EUA assumiram a administração da zona de ocupação sul na Coreia, enquanto a URSS regia a zona norte. As tensões se acentuaram em 25 de junho de 1950, dia em que forças norte-coreanas atravessaram um corredor que levava à Coreia do Sul. Forças dos Estados Unidos respaldadas pelas Nações Unidas interviram.",
+  "Em 1º de novembro de 1952, os EUA afirmaram terem detonado uma bomba de hidrogênio com sucesso. ",
+  "O presidente em agosto de 1954, Dwight D. Eisenhower, assinou então o Ato de Energia Atômica, autorizando a troca internacional de informações quanto aos usos pacíficos da energia atômica e endossando o desenvolvimento de energia nuclear comercial. ",
+  "Os Estados Unidos, a União Soviética, o Reino Unido e a França assinaram o Tratado do Estado Austríaco em 15 de maio de 1955, oficialmente encerrando a ocupação quadripartite da Áustria. O país adquiriu status diplomático de nação independente.",
+  "O presidente americano Eisenhower encontrou-se com os primeiros-ministros Nicolai Bulganin, Anthony Eden e Edgar Faure, da URSS, Grã-Bretanha e França, respectivamente, em uma cúpula realizada em julho de 1955 em Geneva. As discussões envolveram pautas sensíveis às quatro partes. ",
+  "Após os EUA recuarem em um acordo de financiamento para a construção da represa de Aswan, o Egito apropriou-se do Canal de Suez e o nacionalizou. O episódio provocou tumulto em 1956 porque era através dele que o ocidente recebia suas cargas de petróleo. Mobilizados, Israel, Reino Unido e França estabeleceram uma ação militar contra um contingente egípcio abastecido por soviéticos. A esta altura, soviéticos estavam reprimindo rebeliões anti-socialistas na Polônia e Hungria. Eisenhower, postulando que estes forneceriam assistência em larga escala ao Egito, “arrancou” retratações dos três países operadores da ofensiva. ",
+  "Os Estados Unidos foram superados pela URSS na gênese da corrida espacial; o primeiro satélite estadunidense, Explorer I, foi lançado três meses depois do arremate de Sputnik I.",
+  "Em 25 de outubro de 1958, os Estados Unidos e a Grã-Bretanha concordaram em suspender testes com armamento nuclear por um ano.",
+  "Setembro de 1959: primeira visita aos EUA de um líder soviético desde a origem das relações entre o Estado norte-americano e a URSS em 1933.",
+  "O Tratado Antártico foi assinado em 1º de dezembro de 1959 por Estados Unidos, URSS e dez outros países, os quais se comprometeram a internacionalizar e desmilitarizar o continente antártico.",
+  "Maio de 1960: a “histeria” da retórica americana trouxe aos EUA uma indisposição significativa com a URSS uma vez que esta descobriu que os oponentes tinham uma missão espiã de sobrevoos de seu território em curso. O evento ficou conhecido como Incidente U-2, devido ao modelo do jato utilizado na ocasião em que o discurso estadunidense caiu por terra. ",
+  "Um ano mais tarde, em julho de 1961, considerava-se iminente nova intervenção soviética em Berlim. O presidente americano John F. Kennedy advertiu que os Estados Unidos não tolerariam quaisquer mudanças no enquadramento de Berlim, convocando 150 mil reservistas que protegeriam os defensores de um potencial ataque.",
+  "Negociatas: a informação de que a União Soviética estaria implementando mísseis balísticos nucleares de médio alcance em Cuba chegou ao gabinete do presidente Kennedy, e, em 14 de outubro de 1962, o chefe de Estado comunicou uma quarentena naval de Cuba a fim de impedir novas entregas de mísseis soviéticos, demandando ainda a remoção ou desmantelamento dos mísseis já situados em Cuba. Tais requisições foram atendidas, o que induziu os americanos a rever sua ameaça de invadir Cuba. ",
+  "No ano seguinte, 1963, os EUA, a URSS e o Reino Unido ingressaram no Tratado de Proibição Limitada de Testes, enaltecendo que testes nucleares na atmosfera, no espaço sideral e debaixo d’água estavam banidos.",
+  "Nova guerra asiática: em março de 1965, o presidente estadunidense Lyndon B. Johnson alocou as primeiras tropas terrestres americanas de combate ao Vietnã, almejando auxiliar o Governo Sul-Vietnamita no confronto contra comandos Norte-Vietnamitas e de Viet Cong, apoiados pela URSS.",
+  "Em 27 de janeiro de 67, os EUA e a URSS assinaram o Tratado de Usos Pacíficos do Espaço Sideral. O pacto vedava a inserção de armas de destruição em massa na órbita de satélites e de corpos celestiais e no espaço sideral. ",
+  "Em julho do ano a seguir, sessenta e duas nações, incluindo os EUA, a União Soviética e o Reino Unido, assinaram o Tratado de Não Proliferação Nuclear, destinado à prevenção da difusão de armas nucleares.",
+  "Em agosto do mesmo ano, sucede-se a invasão soviética da Checoslováquia. Os Estados Unidos acompanharam uma resolução do Conselho de Segurança da ONU que condenava a invasão, reivindicava a pronta retirada das forças do Pacto de Varsóvia, suspendia certos acordos comerciais entre EUA e URSS e pospunha a ratificação do Tratado de Não Proliferação Nuclear. ",
+  "Na segunda metade de 1969, os EUA contestaram a chegada de uma flotilha soviética e a construção de uma base submarina soviética em Cayo Alcatraz, Baía de Cienfuegos, Cuba. ",
+  "Sessenta e três países assinam um tratado de proibição de implantação de armas nucleares no leito do mar em fevereiro de 1971.",
+  "Mais um acordo em que se inserem Estados Unidos, URSS, França e Grã-Bretanha: Acordo Quadripartite. Assinado em Berlim em 3 de setembro de 1971, ensejava maior liberdade de ir e vir pela cidade e por entre os setores divididos. No final desse mês, EUA e URSS assinaram também um Acordo para Medidas de Redução do Risco de Emergência de Guerra Nuclear.",
+  "Em maio de 1972, o então presidente norte-americano Richard M. Nixon tornou-se o primeiro no cargo a visitar a cidade de Moscou, por incentivo diplomático.",
+  "Apesar dos contrastes, os EUA e a União Soviética conduziram o Projeto de Testes Apollo-Soyuz, uma empreitada espacial conjunta, em julho de 1975.",
+  "“Só fachada”: em junho de 1979, é firmado um contrato que prevê novas instalações para a Embaixada dos Estados Unidos em Moscou.",
+  "Poucos meses depois, em 20 de dezembro de 1979, os membros da OTAN decidiram a adoção de uma estratégia especial para fazer frente aos lançamentos de mísseis soviéticos SS-20.",
+  "Em questão de dias, a oposição recrudesceu mais uma vez com a invasão soviética do Afeganistão. O Estado americano mostrou-se desgostoso e limitou trocas comerciais, restringiu direitos soviéticos de pesca em áreas nacionais de água, suspendeu a exportação de grãos e prenunciou um boicote das Olimpíadas de Moscou de 1980.",
+  "Os Estados Unidos, além de 63 outros participantes, boicotaram as Vigésima-Segundas Olimpíadas da era Moderna, sediadas em Moscou entre julho e agosto de 1980.",
+  "Em setembro de 80, os EUA declaram neutralidade perante a Guerra Irã-Iraque.",
+  "Em abril de 1981, o presidente Ronald Reagan informou o afrouxamento do embargo na exportação de grãos para a União Soviética.",
+  "Os EUA, entretanto, continuavam antagonizando o leste europeu influenciado pela URSS. Quando autoridades declararam lei marcial na Polônia em 1981, a nação ocidental sancionou medidas contrárias ao governo polaco e à URSS pela imposição da lei.",
+  "O embargo de grãos tendo sido revogado, os EUA emitiram em outubro de 82 que venderiam 23 toneladas métricas de grãos à União Soviética.",
+  "Em sequência à morte do líder soviético Brezhnev, uma comitiva dos EUA compareceu ao funeral, que ocorreu em novembro de 1982.",
+  "Em janeiro do ano subsequente, o presidente Reagan teria escrito uma carta aberta à Europa que ilustrava o interesse estadunidense em “banir mísseis nucleares terrestres de médio alcance da face da Terra”, contanto que a União Soviética concordasse em fazer o mesmo.",
+  "O dissabor entre os adversários reacendeu-se em 21 de março de 1984, com uma colisão de baixa magnitude entre um porta-aeronaves americano e um submarino soviético no Mar do Japão. ",
+  "1985 foi um ano de diálogo mais produtivo: União Soviética e Estados Unidos anunciaram que retomariam serviço aéreo civil. Um clima menos hostil também foi sentido em dois pronunciamentos em janeiro de 1986, executados por, respectivamente, Ronald Reagan e pelo Secretário Geral Mikhail Gorbachev. A ocasião era o Ano Novo e as palavras destinavam-se principalmente à população da região adversária a cada um dos blocos.",
+  "Em abril de 1986, os Estados Unidos cumpriram com o adiantamento dado no ano anterior e retomaram voos comerciais partindo de seu território e destinados à URSS.",
+  "Em torno de um ano depois, oficiais da administração de Reagan reportaram que a Embaixada estadunidense em Moscou havia sido alvo da implantação de dispositivos eletrônicos de escuta e portanto não seriam mais transmitidas mensagens sensíveis de pontos de embaixadas. Ademais, Reagan pediu que o Quadro de Análise da Inteligência mensurasse a extensão dos grampos soviéticos na nova Embaixada dos EUA em Moscou, com o propósito de estudar as vulnerabilidades do local.",
+  "Enquanto as tratativas se acumulavam, Reagan e o Secretário Geral Gorbachev encontraram-se na Ilha do Governador, no porto de Nova Iorque, em dezembro de 1988. O líder soviético estava em NI em razão da Assembleia Geral das Nações Unidas. ",
+  "George H. W. Bush deu seguimento à chefia dos EUA com uma postura “integradora”: em nota pública de 12 de maio de 1989, reafirmou o desejo americano de que a reforma econômica soviética fosse exitosa e a União Soviética fosse cortês com a comunidade de nações independentes. Nada obstante, sugeriu voos regulares de supervisão sobre territórios da OTAN e aderentes ao Pacto de Varsóvia e comentou o aprimoramento de relações comerciais bilaterais com a União Soviética, caso esta relaxasse sua legislação de emigração.",
+  "As reuniões continuaram. Em setembro de 1989, o Secretário do Estado americano, James Baker, e o Ministro soviético do Exterior, Eduard Shevardnadze, encontraram-se no estado de Wyoming, EUA, e publicaram um texto conjunto que detalhava a agenda completa dos dois entes soberanos. Adicionalmente, assinaram vários acordos bilaterais concernentes a passagens terrestres e marítimas que interligariam EUA e URSS.",
+  "Finalmente, em Malta, dezembro de 1989, os então presidentes Bush e Gorbachev debateram uma série de prioridades com vistas à preparação para uma eventual cúpula nova. Alguns veículos interpretaram o episódio como o “desfecho simbólico” da Guerra Fria."];
+  for (let i = 0; i <= 49; i++) {
+    document.getElementById(`ps${(i+1)}`).innerText = textos[i];
+}
+    document.getElementById("img4").setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/2/25/Zanjan_militia_taking_up_arms_against_separatists_led_by_Pishevari.png");
+    document.getElementById("img4").setAttribute("width","75%");
+    document.getElementById("img4").setAttribute("height","75%");
+    document.getElementById("img5").setAttribute("src","https://cdn.hswstatic.com/gif/truman-doctrine.jpg");
+    document.getElementById("img5").setAttribute("width","75%");
+    document.getElementById("img5").setAttribute("height","75%");
+    document.getElementById("img6").setAttribute("src","https://www.nationalww2museum.org/sites/default/files/styles/wide_medium/public/2022-03/primary%20image%20-%20Stephanie%20Hinnershitz.jpg");
+    document.getElementById("img6").setAttribute("width","50%");
+    document.getElementById("img6").setAttribute("height","50%");
+    document.getElementById("img7").setAttribute("src","https://constitutingamerica.org/wp-content/uploads/2020/06/BerlinAirliftUnloadFlourGatowOpVittles.jpg");
+    document.getElementById("img7").setAttribute("width","75%");
+    document.getElementById("img7").setAttribute("height","75%");
+    document.getElementById("img8").setAttribute("src","https://diplomacy.state.gov/wp-content/uploads/2024/07/NWEGEO-Map_Resized-1024x1024.jpg");
+    document.getElementById("img8").setAttribute("width","60%");
+    document.getElementById("img8").setAttribute("height","60%");
+    document.getElementById("img9").setAttribute("src","https://www.cfr.org/sites/default/files/styles/slide_3_2/public/image/2012/04/lindsay-nsc68-2012-04-14.webp");
+    document.getElementById("img9").setAttribute("width","60%");
+    document.getElementById("img9").setAttribute("height","60%");
+    document.getElementById("img10").setAttribute("src","https://armybenevolentfund.org/wp-content/uploads/2023/06/large_000000-8-700x494-1.jpg");
+    document.getElementById("img10").setAttribute("width","75%");
+    document.getElementById("img10").setAttribute("height","75%");
+    document.getElementById("img11").setAttribute("src","https://www.osti.gov/opennet/manhattan-project-history/Science/BombDesign/images/ivy-mike.jpg");
+    document.getElementById("img12").setAttribute("src","https://live.staticflickr.com/4081/4881438010_db1affb8e2_c.jpg");
+    document.getElementById("img12").setAttribute("width","75%");
+    document.getElementById("img12").setAttribute("height","75%");
+document.getElementById("img13").setAttribute("src","https://images.squarespace-cdn.com/content/51e5ae06e4b0fa162621f8d3/1379947292319-7OC6NILW6ZKYXWBUTTBU/Unterzeichnung.jpg");
+document.getElementById("img14").setAttribute("src","https://millercenter.org/sites/default/files/%5Bdate%3Acustom%3AY%5D-%5Bdate%3Acustom%3Am%5D/1955_Geneva_Conference.jpg");
+document.getElementById("img14").setAttribute("width","75%");
+    document.getElementById("img14").setAttribute("height","75%");
+document.getElementById("img15").setAttribute("src","https://diplomacy.state.gov/wp-content/uploads/2022/10/6-1956-Port-Said-Assault.jpg");
+document.getElementById("img15").setAttribute("width","75%");
+    document.getElementById("img15").setAttribute("height","75%");
+document.getElementById("img16").setAttribute("src","https://spacecenter.org/wp-content/uploads/2022/01/Explorer1_0200146-1024x725.jpg");
+document.getElementById("img16").setAttribute("width","75%");
+    document.getElementById("img16").setAttribute("height","75%");
+document.getElementById("img17").setAttribute("src","https://ddhfs03kp1zcg.cloudfront.net/uploads/image/3853/sixhundred_412-nuclear-history-5.jpg");
+document.getElementById("img17").setAttribute("width","50%");
+    document.getElementById("img17").setAttribute("height","50%");
+document.getElementById("img18").setAttribute("src","https://static.politico.com/3d/90/90be167d4c05a935ff85b7bf9be2/160925-this-day-ap-5909250143.jpg");
+document.getElementById("img18").setAttribute("width","75%");
+    document.getElementById("img18").setAttribute("height","75%");
+document.getElementById("img19").setAttribute("src","https://www.bas.ac.uk/wp-content/uploads/2015/03/Treaty-flags_master_52-flags_May15-652x552.jpg");
+document.getElementById("img19").setAttribute("width","75%");
+    document.getElementById("img19").setAttribute("height","75%");
+document.getElementById("img20").setAttribute("src","https://www.eisenhowerlibrary.gov/sites/default/files/2019-08/75-5-28%20unknown.jpg");
+document.getElementById("img20").setAttribute("width","75%");
+    document.getElementById("img20").setAttribute("height","75%");
+document.getElementById("img21").setAttribute("src","https://api.army.mil/e2/c/-images/2010/10/24/89542/size0-full-army.mil-89542-2010-10-22-101015.jpg");
+document.getElementById("img21").setAttribute("width","75%");
+    document.getElementById("img21").setAttribute("height","75%");
+document.getElementById("img22").setAttribute("src","https://oldestvocation.com/wp-content/uploads/2022/10/pastedgraphic-3-3.png");
+document.getElementById("img22").setAttribute("width","50%");
+    document.getElementById("img22").setAttribute("height","50%");
+document.getElementById("img23").setAttribute("src","https://ecuip.lib.uchicago.edu/multiwavelength-astronomy/images/gamma-ray/history/Kennedy_TestBanTreaty-page.jpg");
+document.getElementById("img24").setAttribute("src","https://cdn.britannica.com/22/78022-138-77ABC6DC/US-Marines-troops-Vietnam-Perspective-Da-Nang-March-1965.jpg");
+document.getElementById("img24").setAttribute("width","75%");
+    document.getElementById("img24").setAttribute("height","75%");
+document.getElementById("img25").setAttribute("src","https://www.spacefoundation.org/wp-content/uploads/2019/09/Signing-of-the-Outer-Space-Treaty-Credit-United-Nations-1024x688.jpg");
+document.getElementById("img25").setAttribute("width","75%");
+    document.getElementById("img25").setAttribute("height","75%");
+    document.getElementById("img26").setAttribute("src","https://ahf.nuclearmuseum.org/wp-content/uploads/2016/06/NPT.jpg");
+    document.getElementById("img27").setAttribute("src","https://i0.wp.com/hyperallergic-newspack.s3.amazonaws.com/uploads/2018/09/01-Lammer-VL-720x565.jpg");
+document.getElementById("img27").setAttribute("width","75%");
+    document.getElementById("img27").setAttribute("height","75%");
+    document.getElementById("img28").setAttribute("src","https://i.imgur.com/fUFPM4d.png");
+    document.getElementById("img28").setAttribute("width","75%");
+    document.getElementById("img28").setAttribute("height","75%");
+     document.getElementById("img29").setAttribute("src","https://cdn11.bigcommerce.com/s-9xwo1raw7u/images/stencil/1280x1280/products/72780/54733/UnitedNationsGeneva-UNG15__75470.1712968230.jpg");
+    document.getElementById("img29").setAttribute("width","40%");
+    document.getElementById("img29").setAttribute("height","40%");
+     document.getElementById("img30").setAttribute("src","https://www.cvce.eu/content/publication/1998/11/11/cf2dffe6-bd0c-4752-8810-ab3450caf3e1/publishable.jpg");
+    document.getElementById("img30").setAttribute("width","55%");
+    document.getElementById("img30").setAttribute("height","55%");
+     document.getElementById("img31").setAttribute("src","https://i.ytimg.com/vi/lUULCWgbAn0/sddefault.jpg");
+    document.getElementById("img31").setAttribute("width","70%");
+    document.getElementById("img31").setAttribute("height","70%");
+     document.getElementById("img32").setAttribute("src","https://www.nasa.gov/wp-content/uploads/2015/06/260346main_astp_hatch_full_full.jpg");
+    document.getElementById("img32").setAttribute("width","70%");
+    document.getElementById("img32").setAttribute("height","70%");
+     document.getElementById("img33").setAttribute("src","https://cdn10.picryl.com/photo/2006/12/31/moscow-chancery-office-building-1979-036409-1024.jpg");
+    document.getElementById("img33").setAttribute("width","70%");
+    document.getElementById("img33").setAttribute("height","70%");
+     document.getElementById("img34").setAttribute("src","https://img.welt.de/img/politik/mobile100522114/8272506957-ci102l-w1024/pershing-BM-Berlin-Bonn-jpg.jpg");
+    document.getElementById("img34").setAttribute("width","70%");
+    document.getElementById("img34").setAttribute("height","70%");
+     document.getElementById("img35").setAttribute("src","https://i.imgur.com/t9gcHRs.jpeg");
+    document.getElementById("img35").setAttribute("width","40%");
+    document.getElementById("img35").setAttribute("height","40%");
+     document.getElementById("img36").setAttribute("src","https://www.thenation.com/wp-content/uploads/2015/05/moscow_olympics_boycott_img.jpg");
+    document.getElementById("img36").setAttribute("width","75%");
+    document.getElementById("img36").setAttribute("height","75%");
+     document.getElementById("img37").setAttribute("src","https://static.dw.com/image/17005403_304.jpg");
+    document.getElementById("img37").setAttribute("width","75%");
+    document.getElementById("img37").setAttribute("height","75%");
+     document.getElementById("img38").setAttribute("src","https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/1422455/American-Soviet-Flag.jpg?1473592094");
+    document.getElementById("img38").setAttribute("width","75%");
+    document.getElementById("img38").setAttribute("height","75%");
+     document.getElementById("img39").setAttribute("src","https://kuryerpolski.us/image/78g72a34fy9ky69ndsczgida6h");
+    document.getElementById("img39").setAttribute("width","75%");
+    document.getElementById("img39").setAttribute("height","75%");
+     document.getElementById("img40").setAttribute("src","https://www.agriculture.com/thmb/IgdgZyICctZYR5_A5AgAWLOLiOQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/IMG_1644-600683a6cc9a41cc990c5294c9550262.jpg");
+    document.getElementById("img40").setAttribute("width","50%");
+    document.getElementById("img40").setAttribute("height","50%");
+     document.getElementById("img41").setAttribute("src","https://i0.wp.com/oildale.s3.amazonaws.com/wp-content/uploads/2020/11/13152124/Brezhnev-Funeral-Joe-Cantu-photo-1982-2-resize.jpg");
+    document.getElementById("img41").setAttribute("width","85%");
+    document.getElementById("img41").setAttribute("height","85%");
+     document.getElementById("img42").setAttribute("src","https://oceanstatecurrent.com/wp-content/uploads/2024/01/Ronald-Reagan-Day-768x432.png");
+    document.getElementById("img42").setAttribute("width","85%");
+    document.getElementById("img42").setAttribute("height","85%");
+     document.getElementById("img43").setAttribute("src","https://nationalinterest.org/sites/default/files/styles/desktop__1260_/public/main_images/Victor_III_class_submarine_0.jpg");
+    document.getElementById("img43").setAttribute("width","85%");
+    document.getElementById("img43").setAttribute("height","85%");
+     document.getElementById("img44").setAttribute("src","https://media.vanityfair.com/photos/54cc0025998d4de83ba43e15/master/w_1600%2Cc_limit/image.jpg");
+    document.getElementById("img44").setAttribute("width","35%");
+    document.getElementById("img44").setAttribute("height","35%");
+     document.getElementById("img45").setAttribute("src","https://th-thumbnailer.cdn-si-edu.com/waVYb94tWirl302rHuFrytdC4n0=/1000x750/filters:no_upscale():focal(1020x709:1021x710)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/34/c0/34c0ec29-515b-4397-9d9a-f851780f3ba5/julaug2018_a08_prologue.jpg");
+    document.getElementById("img45").setAttribute("width","75%");
+    document.getElementById("img45").setAttribute("height","75%");
+     document.getElementById("img46").setAttribute("src","https://i.ytimg.com/vi/brqvNhTem5A/mqdefault.jpg");
+document.getElementById("img47").setAttribute("src","https://nsarchive.gwu.edu/sites/default/files/styles/wide/public/thumbnails/image/bush-reagan-gorbachev-on-governors-island-1988-600.jpg");
+    document.getElementById("img47").setAttribute("width","50%");
+    document.getElementById("img47").setAttribute("height","50%");
+document.getElementById("img48").setAttribute("src","https://abcnews.go.com/images/Politics/AP-h-w-bush-inauguration-02-as-161220_3x2_1600.jpg");
+    document.getElementById("img48").setAttribute("width","50%");
+    document.getElementById("img48").setAttribute("height","50%");
+  document.getElementById("img49").setAttribute("src","https://cdnph.upi.com/pv/upi/a9273a006fe8fd9ed1d7ddbec0b50217/1990-Summit-between-Pres-Bush-and-Soviet-President-Gorbachev.jpg");
+  document.getElementById("img49").setAttribute("width","75%");
+    document.getElementById("img49").setAttribute("height","75%");
+  document.getElementById("img50").setAttribute("src","https://assets.editorial.aetnd.com/uploads/2018/12/bush-cold-war-gettyimages-837264806.jpg");
+  document.getElementById("img50").setAttribute("width","75%");
+    document.getElementById("img50").setAttribute("height","75%");
+    }
+    </script>
+    <div class="text-center">
+    <button type="button" class="btn btn-primary" onclick="goFs()">Visualizar em tela cheia</button>
+    </div>
+    <div id="carrossel_gf" class="carousel carousel-dark slide" style="zoom: 200%; font-size:11px">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="9" aria-label="Slide 10"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="10" aria-label="Slide 11"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="11" aria-label="Slide 12"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="12" aria-label="Slide 13"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="13" aria-label="Slide 14"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="14" aria-label="Slide 15"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="15" aria-label="Slide 16"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="16" aria-label="Slide 17"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="17" aria-label="Slide 18"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="18" aria-label="Slide 19"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="19" aria-label="Slide 20"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="20" aria-label="Slide 21"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="21" aria-label="Slide 22"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="22" aria-label="Slide 23"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="23" aria-label="Slide 24"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="24" aria-label="Slide 25"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="25" aria-label="Slide 26"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="26" aria-label="Slide 27"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="27" aria-label="Slide 28"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="28" aria-label="Slide 29"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="29" aria-label="Slide 30"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="30" aria-label="Slide 31"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="31" aria-label="Slide 32"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="32" aria-label="Slide 33"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="33" aria-label="Slide 34"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="34" aria-label="Slide 35"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="35" aria-label="Slide 36"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="36" aria-label="Slide 37"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="37" aria-label="Slide 38"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="38" aria-label="Slide 39"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="39" aria-label="Slide 40"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="40" aria-label="Slide 41"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="41" aria-label="Slide 42"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="42" aria-label="Slide 43"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="43" aria-label="Slide 44"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="44" aria-label="Slide 45"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="45" aria-label="Slide 46"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="46" aria-label="Slide 47"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="47" aria-label="Slide 48"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="48" aria-label="Slide 49"></button>
+        <button type="button" data-bs-target="#carrossel_gf" data-bs-slide-to="49" aria-label="Slide 50"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+         <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+          <div class="carousel-caption d-none d-md-block">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_map_of_Bulgaria_%28Soviet_Union%29.png" width="40%" height="40%"/>
+            <p id="ps1">This is slide 1.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#eee"></rect></svg>
+          <div class="carousel-caption d-none d-md-block">
+          <img src="https://nsarchive.gwu.edu/sites/default/files/thumbnails/image/collage_4.jpg" width="75%" height="75%">
+            <p id="ps2">This is slide 2.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#e5e5e5"></rect></svg>
+          <div class="carousel-caption d-none d-md-block">
+            <img src="https://api.time.com/wp-content/uploads/2015/03/iron-curtain.jpeg" width="75%" height="75%">
+            <p id="ps3">This is slide 3.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrossel_gf" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carrossel_gf" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script>function goFs(){const clider=document.documentElement;
+    var getto=document.getElementsByClassName('carousel-indicators')[0];
+    try {
+    clider.webkitRequestFullscreen();
+    } catch(Exception){
+      clider.requestFullscreen();
+    }
+    getto.scrollIntoView();
+    }
+    </script>
+  </body>
+</html>
